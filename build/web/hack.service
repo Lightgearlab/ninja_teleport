@@ -1,0 +1,16 @@
+[Unit]
+Description = hack
+
+[Service]
+Type           = simple
+User           = root
+Group          = root
+LimitNOFILE    = 4096
+Restart        = always
+RestartSec     = 5s
+StandardOutput = append:/root/hack/ninja_teleport/build/web/errors.log
+StandardError  = append:/root/hack/ninja_teleport/build/web/errors.log
+ExecStart      = /root/hack/ninja_teleport/build/web/myapp serve --http="127.0.0.1:3000"
+
+[Install]
+WantedBy = multi-user.target
