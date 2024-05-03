@@ -1,22 +1,10 @@
 import 'dart:ui';
 
 import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flame/parallax.dart';
+import 'package:ninja_teleport/TRex/trex_game.dart';
 
-class BGParallax extends FlameGame {
-  static const String description = '''
-    Shows how to do initiation and loading of assets from within an extended
-    `ParallaxComponent`,
-  ''';
-
-  @override
-  Future<void> onLoad() async {
-    add(MyParallaxComponent());
-  }
-}
-
-class MyParallaxComponent extends ParallaxComponent<BGParallax> {
+class MyParallaxComponent extends ParallaxComponent<TRexGame> {
   @override
   Future<void> onLoad() async {
     parallax = await game.loadParallax(

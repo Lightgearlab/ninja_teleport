@@ -1,5 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:ninja_teleport/TRex/trex_game.dart';
 import 'package:ninja_teleport/bgparallax.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: GameWidget(
-        game: BGParallax(),
+        game: TRexGame(),
       ),
     );
   }
